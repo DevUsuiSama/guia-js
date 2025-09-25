@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras condicionales simples</title>
+</head>
+
+<body>
+    <h1>Estructuras condicionales simples</h1>
+
+    <button onclick="ejercicio1()">Ejercicio 1</button>
+    <button onclick="ejercicio2()">Ejercicio 2</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        const resultado = document.getElementById("resultado");
+
+        function ejercicio1() {
+            const nota1 = parseInt(prompt("Ingrese primera nota:"), 10);
+            const nota2 = parseInt(prompt("Ingrese segunda nota:"), 10);
+            const nota3 = parseInt(prompt("Ingrese tercera nota:"), 10);
+            const suma = nota1 + nota2 + nota3;
+            const promedio = suma / 3;
+            const msg = promedio >= 7 ? "Promocionado" : "No promocionado";
+            resultado.innerHTML = `
+                <h2>Ejercicio 1</h2>
+                <p>Promedio: ${promedio.toFixed(2)} — ${msg}</p>
+            `;
+        }
+
+        function ejercicio2() {
+            const clave1 = prompt("Ingrese la clave:");
+            const clave2 = prompt("Ingrese nuevamente la clave:");
+            const iguales = clave1 === clave2;
+            const msg = iguales ? "Las claves son iguales" : "Las claves no coinciden";
+            resultado.innerHTML = `
+                <h2>Ejercicio 2</h2>
+                <p>${msg}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras Secuenciales</title>
+</head>
+
+<body>
+    <h1>Estructuras Secuenciales</h1>
+
+    <button onclick="ejercicio1()">Ejercicio 1</button>
+    <button onclick="ejercicio2()">Ejercicio 2</button>
+    <button onclick="ejercicio3()">Ejercicio 3</button>
+    <button onclick="ejercicio4()">Ejercicio 4</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        const resultado = document.getElementById("resultado");
+
+        function ejercicio1() {
+            const lado = parseInt(prompt("Ingrese el lado del cuadrado:"));
+            const perimetro = lado * 4;
+            resultado.innerHTML = `
+                <h2>Ejercicio 1</h2>
+                <p>El perímetro del cuadrado es ${perimetro}</p>
+            `;
+        }
+
+        function ejercicio2() {
+            const num1 = parseInt(prompt("Ingrese el primer número:"));
+            const num2 = parseInt(prompt("Ingrese el segundo número:"));
+            const num3 = parseInt(prompt("Ingrese el tercer número:"));
+            const num4 = parseInt(prompt("Ingrese el cuarto número:"));
+            const suma = num1 + num2;
+            const producto = num3 * num4;
+            resultado.innerHTML = `
+                <h2>Ejercicio 2</h2>
+                <p>La suma de los dos primeros es ${suma} y el producto del tercero y cuarto es ${producto}</p>
+            `;
+        }
+
+        function ejercicio3() {
+            const v1 = parseInt(prompt("Ingrese el primer valor:"));
+            const v2 = parseInt(prompt("Ingrese el segundo valor:"));
+            const v3 = parseInt(prompt("Ingrese el tercer valor:"));
+            const v4 = parseInt(prompt("Ingrese el cuarto valor:"));
+            const suma = v1 + v2 + v3 + v4;
+            const promedio = suma / 4;
+            resultado.innerHTML = `
+                <h2>Ejercicio 3</h2>
+                <p>La suma de los valores es ${suma} y el promedio es ${promedio}</p>
+            `;
+        }
+
+        function ejercicio4() {
+            const precio = parseInt(prompt("Ingrese el precio del artículo (entero):"));
+            const cantidad = parseInt(prompt("Ingrese la cantidad:"));
+            const total = precio * cantidad;
+            resultado.innerHTML = `
+                <h2>Ejercicio 4</h2>
+                <p>El total a abonar es $${total}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

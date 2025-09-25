@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+    <h1>Datos del Empleado</h1>
+    <div id="resultado"></div>
+
+    <script>
+        const nombreEmpleado = "Usui";
+        const sueldo = 50000;
+
+        const resultado = document.getElementById("resultado");
+
+        resultado.innerHTML = `
+      <p><strong>Nombre:</strong> ${nombreEmpleado}</p>
+      <p><strong>Sueldo:</strong> $${sueldo}</p>
+    `;
+    </script>
+</body>
+
+</html>
